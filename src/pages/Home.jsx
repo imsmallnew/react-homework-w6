@@ -56,10 +56,22 @@ export default function Home() {
                 {/* Content Section */}
                 <div className="position-relative d-flex flex-column align-items-center justify-content-center vh-100 text-center px-4">
                     <motion.h1
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0 }}
                         className="display-3 fw-bold text-shadow"
                         style={{ opacity: textOpacity, transform: `translateY(${textY}px)` }} // ✅ 改為 transform
                     >
-                        Welcome to<br /> Daniel American Restaurent
+                        Welcome to
+                    </motion.h1>
+                    <motion.h1
+                        initial={{ y: -100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.8,  delay: 0.2}}
+                        className="display-3 fw-bold text-shadow"
+                        style={{ opacity: textOpacity, transform: `translateY(${textY}px)` }} // ✅ 改為 transform
+                    >
+                        Daniel American Restaurent
                     </motion.h1>
 
                     <motion.p
